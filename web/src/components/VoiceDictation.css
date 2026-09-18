@@ -1,0 +1,174 @@
+.voice-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--accent-bg);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.voice-card.is-recording {
+  border-color: var(--accent);
+}
+
+.voice-card-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.voice-mic {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-mic:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.voice-card.is-recording .voice-mic {
+  background: #dc2626;
+  animation: voice-pulse 1.4s ease-out infinite;
+}
+
+.voice-stop-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+@keyframes voice-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.45); }
+  100% { box-shadow: 0 0 0 12px rgba(220, 38, 38, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voice-card.is-recording .voice-mic {
+    animation: none;
+  }
+}
+
+.voice-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.voice-copy h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.voice-copy p {
+  margin: 2px 0 0;
+  font-size: 13px;
+}
+
+.voice-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.voice-error {
+  margin: 0;
+  font-size: 13px;
+  color: #dc2626;
+}
+
+.voice-live {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  font-size: 14px;
+  color: var(--text-h);
+  min-height: 42px;
+}
+
+.voice-interim {
+  color: var(--text);
+  font-style: italic;
+}
+
+.voice-waiting {
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.voice-review {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.voice-review label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.voice-review textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text-h);
+  background: var(--bg);
+  resize: vertical;
+}
+
+.voice-review textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.voice-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.voice-actions button {
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.voice-secondary {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.voice-primary {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+}
+
+.voice-primary:hover {
+  background: var(--accent-hover);
+}

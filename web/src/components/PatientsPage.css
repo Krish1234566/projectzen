@@ -1,0 +1,142 @@
+.patients-page {
+  padding: 32px 40px;
+}
+
+.patients-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.patients-header p {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+}
+
+.patients-table {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.patients-table-head,
+.patients-table-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr 1fr 0.6fr;
+  gap: 16px;
+  padding: 14px 20px;
+  align-items: center;
+}
+
+.patients-table-head {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.patients-table-row {
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+.patients-table-row:last-child {
+  border-bottom: none;
+}
+
+.patients-empty {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.patients-banner {
+  background: #fdecec;
+  color: #b3261e;
+  border: 1px solid #f5c2c0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.patients-search {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: var(--text-h);
+  background: var(--bg);
+}
+
+.patients-search:focus {
+  outline: 2px solid var(--accent-bg);
+  border-color: var(--accent);
+}
+
+.patients-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-chip {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filter-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.row-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-link.danger {
+  color: #d33;
+}
