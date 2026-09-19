@@ -82,3 +82,10 @@ export function createPrescription(payload) {
     body: JSON.stringify(payload),
   })
 }
+
+export function updatePrescription(id, payload) {
+  return request(`/prescriptions/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify(payload),
+  })
+}
